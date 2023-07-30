@@ -2,8 +2,11 @@ import pytest
 from selenium import webdriver
 import logging
 from selenium.webdriver.chrome.service import Service
+from pytest_bdd import scenarios
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+scenarios('../features/market.feature')
 
 @pytest.fixture(scope='session')
 def browser():
