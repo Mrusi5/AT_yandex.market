@@ -12,7 +12,8 @@ def browser():
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
     options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_extension('step_defs/User-Agent Switcher for Chrome - Интернет-магазин Chrome 1.1.0.0.crx')
     driver = webdriver.Chrome(service=service, options=options)
     driver.implicitly_wait(10)
     yield driver
-    driver.quit()
+    driver.quit() 
