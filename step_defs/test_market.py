@@ -1,6 +1,6 @@
 import logging
 import random
-from pytest_bdd import given, when, then, scenarios
+from pytest_bdd import given, when, then
 from conftest import browser
 import time
 from selenium.webdriver.common.action_chains import ActionChains
@@ -10,10 +10,6 @@ def check_cap(browser):
     if 'showcaptcha' in browser.current_url:
         element = browser.find_element('id', 'js-button')
         element.click()
-
-scenarios('../features/market.feature')
-
-
 
 
 @given("Открыть браузер и развернуть на весь экран")
